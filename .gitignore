@@ -1,0 +1,21 @@
+# Secrets. Never commit these.
+.env
+.env.*
+!.env.example
+
+# OS noise
+.DS_Store
+Thumbs.db
+*.log
+
+# Language / tool caches
+__pycache__/
+node_modules/
+.venv/
+
+# Claude Code local-only settings
+.claude/settings.local.json
+.claude/*.lock
+
+# Scratch
+.tmp/
