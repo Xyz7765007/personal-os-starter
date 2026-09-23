@@ -64,6 +64,8 @@ personal-os-starter/
 ├── archives/                    <- old things; move here, do not delete
 ├── docs/                        <- the getting-started guide (PDF)
 ├── .env.example                 <- copy to .env for keys; .env is never committed
+├── AGENTS.md                    <- pointer to CLAUDE.md for Codex users
+├── .agents/skills/              <- Codex copies of the three skills ($onboard, $audit, $level-up)
 └── .claude/
     ├── settings.json            <- session-end hook
     ├── hooks/session-end.sh     <- journals + commits + pushes at the end of a session
@@ -90,6 +92,14 @@ The kit is lean on purpose. Add folders only when you feel the need three times.
 Do not add `notes/`, `misc/`, `tmp/` or `inbox/`. They become graveyards.
 
 ---
+
+## Using Codex instead of Claude Code
+
+The kit is written for Claude Code and works best there. It also runs under OpenAI's Codex extension for VS Code:
+
+- Codex reads `AGENTS.md`, which points it at `CLAUDE.md`, so the operating manual is shared.
+- The three skills are mirrored in `.agents/skills/`. Type `$onboard`, `$audit` and `$level-up` instead of the slash versions.
+- There is no session-end hook in Codex, so ask it to commit and push at the end of each session. The rules in `CLAUDE.md` tell it to.
 
 ## Safety rules the kit ships with
 
